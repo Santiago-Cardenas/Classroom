@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="createAccountPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="191.0" layoutY="32.0" prefHeight="44.0" prefWidth="169.0" text="Join to Classroom">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="85.0" layoutY="54.0" prefHeight="70.0" prefWidth="391.0" text="Create your account:">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="144.0" layoutY="148.0" prefHeight="44.0" prefWidth="104.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_NewUsername" layoutX="263.0" layoutY="158.0" />
+      <TextField fx:id="txt_NewPassword" layoutX="263.0" layoutY="203.0" />
+      <Label alignment="CENTER" layoutX="144.0" layoutY="193.0" prefHeight="44.0" prefWidth="104.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="326.0" prefHeight="44.0" prefWidth="84.0" text="Career:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToLogin" layoutX="162.0" layoutY="548.0" mnemonicParsing="false" onAction="#goBackToSingIn" prefHeight="44.0" prefWidth="104.0" style="-fx-background-color: #65cbff;" text="Sign in">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="createAcc" layoutX="310.0" layoutY="548.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #65cbff;" text="Create Account">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <SplitMenuButton fx:id="browserOption" alignment="CENTER" layoutX="263.0" layoutY="477.0" mnemonicParsing="false" text="Select an option">
+         <items>
+            <MenuItem fx:id="browser_Chrome" mnemonicParsing="false" onAction="#chromeBrowser" text="Google Chrome" />
+            <MenuItem fx:id="browser_Firefox" mnemonicParsing="false" onAction="#firefoxBrowser" text="Mozilla Firefox" />
+            <MenuItem fx:id="browser_Explorer" mnemonicParsing="false" onAction="#explorerBrowser" text="Windows Explorer" />
+         </items>
+      </SplitMenuButton>
+      <TextField fx:id="txt_ProfilePhotoDIR" layoutX="263.0" layoutY="247.0" />
+      <Label alignment="CENTER" layoutX="112.0" layoutY="237.0" prefHeight="44.0" prefWidth="136.0" text="Profile photo:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="Male" layoutX="263.0" layoutY="295.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderOption" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Female" layoutX="325.0" layoutY="295.0" mnemonicParsing="false" text="Female" toggleGroup="$genderOption" />
+      <RadioButton fx:id="Other" layoutX="395.0" layoutY="295.0" mnemonicParsing="false" text="Other" toggleGroup="$genderOption" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="282.0" prefHeight="44.0" prefWidth="94.0" text="Gender:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="bt_CareerSoftware" layoutX="263.0" layoutY="340.0" mnemonicParsing="false" text="Software Engineering">
+         <toggleGroup>
+            <ToggleGroup fx:id="careerOption" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="bt_CareerTelematic" layoutX="263.0" layoutY="369.0" mnemonicParsing="false" text="Telematic Engineering" toggleGroup="$careerOption" />
+      <RadioButton fx:id="bt_CareerIndustrial" layoutX="263.0" layoutY="398.0" mnemonicParsing="false" text="Industrial Engineering" toggleGroup="$careerOption" />
+      <Button layoutX="421.0" layoutY="247.0" mnemonicParsing="false" onAction="#searchForPhoto" style="-fx-background-color: #65cbff;" text="Browse" />
+      <DatePicker fx:id="date_Birthday" layoutX="264.0" layoutY="432.0" />
+      <Label layoutX="158.0" layoutY="423.0" prefHeight="44.0" prefWidth="94.0" text="Birthday:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="467.0" prefHeight="44.0" prefWidth="174.0" text="Favorite Browser:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
